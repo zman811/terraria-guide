@@ -1,4 +1,12 @@
-import { Button, Center, Chip, Group, Space, Title } from "@mantine/core";
+import {
+  Button,
+  Center,
+  Chip,
+  Group,
+  MediaQuery,
+  Space,
+  Title,
+} from "@mantine/core";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -15,13 +23,18 @@ const SuggestionPage: NextPage = () => {
       </Head>
 
       <main>
+          <MediaQuery
+          largerThan={700}
+            styles={{ position: "absolute", right: "0px" }}
+          >
+            <div>
+              <Link href={"/"}>
+                <Button fullWidth>Go back</Button>
+              </Link>
+            </div>
+          </MediaQuery>
         <Group position="center">
-          <Title order={1}>Suggestion Page</Title>
-          <div style={{ position: "absolute", right: "0px" }}>
-            <Link href={"/"}>
-              <Button>Go back</Button>
-            </Link>
-          </div>
+          <Title order={1}>Suggestion Mode</Title>
         </Group>
         <Space h="lg" />
         <Center>
@@ -30,6 +43,7 @@ const SuggestionPage: NextPage = () => {
         <Space h="lg" />
         <Center>
           <Chip.Group
+            position="center"
             multiple={false}
             value={classValue}
             onChange={setClassValue}
@@ -49,6 +63,7 @@ const SuggestionPage: NextPage = () => {
             </Center>
             <Center>
               <Chip.Group
+                position="center"
                 multiple={false}
                 value={gamestate}
                 onChange={setGamestate}
@@ -58,6 +73,7 @@ const SuggestionPage: NextPage = () => {
                 <Chip value="PreMech">Pre Mech Bosses</Chip>
                 <Chip value="PrePlantara">Pre Plantara</Chip>
                 <Chip value="PreLunar">Pre Lunar</Chip>
+                <Chip value="EndGame">EndGame</Chip>
               </Chip.Group>
             </Center>
           </>
