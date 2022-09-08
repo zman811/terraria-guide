@@ -56,7 +56,15 @@ const SuggestionPage: NextPage = () => {
             </Center>
           </>
         )}
-        {gamestate !== "" && <div>will show suggestions here</div> }
+        {gamestate !== "" && (
+          <div>
+            will show suggestions here
+            {classValue === "Magic" && <div>Mage</div>}
+            {classValue === "Melee" && <div>Melee</div>}
+            {classValue === "Ranged" && <div>Ranged</div>}
+            {classValue === "Summoning" && <div>Summoning</div>}
+          </div>
+        )}
         {/*will render another component based on what was selected, ie: (<SuggestionMage gamestate={gamestate})} */}
       </main>
     </div>
