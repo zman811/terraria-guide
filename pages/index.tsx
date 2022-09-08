@@ -1,9 +1,24 @@
-import { Center } from "@mantine/core";
+import {
+  Button,
+  Center,
+  Container,
+  Divider,
+  Grid,
+  Group,
+  Modal,
+  Paper,
+  SimpleGrid,
+  Space,
+  Text,
+  Title,
+} from "@mantine/core";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
       <Head>
@@ -12,9 +27,65 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Modal
+        onClose={() => setIsOpen(false)}
+        opened={isOpen}
+        fullScreen
+        withCloseButton={false}
+      >
+        <SimpleGrid cols={2} breakpoints={[{ maxWidth: 700, cols: 1 }]}>
+          <Group position="center">
+            <div style={{ height: "500px" }}>
+              <Title order={1}>Suggestion mode</Title>
+              <Text style={{ height: "110px" }}>
+                This mode is for people who are maybe playing their first time
+                and dont want as much showen to them. It will not tell you
+                everything and leave more of it up to you by giving you hints on
+                what you could look for and letting you get more if you feel
+                stuck or lost
+              </Text>
+              <Space h="lg" />
+              <Center>
+                <Button fullWidth size="xl">
+                  Pick Suggestion Mode
+                </Button>
+              </Center>
+            </div>
+          </Group>
+          <Group position="center">
+            <div style={{ height: "500px" }}>
+              <Title order={1}>Wiki mode</Title>
+              <Text style={{ height: "110px" }}>
+                This mode is for people who want to know everything, it will
+                tell you things like what exatly to get and how to. It will also
+                have more links to wiki pages for items to let you see exatly
+                what it is
+              </Text>
+              <Space h="lg" />
+              <Center>
+                <Button fullWidth size="xl">
+                  Pick Wiki Mode
+                </Button>
+              </Center>
+            </div>
+          </Group>
+        </SimpleGrid>
+      </Modal>
+
       <main>
         <Center>
           <h1>Welcome to Terraria guide 2.0!</h1>
+        </Center>
+        <Center>
+          <Text>
+            Currently still WIP, there may be some bugs/unfinished parts!
+          </Text>
+        </Center>
+        <Space h="lg" />
+        <Center>
+          <Button size="lg" onClick={() => setIsOpen(true)}>
+            <Text>Get started!</Text>
+          </Button>
         </Center>
       </main>
     </div>
