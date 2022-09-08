@@ -67,10 +67,11 @@ const Home: NextPage = () => {
         </SimpleGrid>
       </Modal>
 
-      <main>
+      <main style={{textAlign: "center"}}>
         <Center>
-          <h1>Welcome to Terraria guide 2.0!</h1>
+          <Title order={1}>Welcome to Terraria guide 2.0!</Title>
         </Center>
+        <Space h="lg"/>
         <Center>
           <Text>
             Currently still WIP, there may be some bugs/unfinished parts!
