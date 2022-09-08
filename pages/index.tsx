@@ -35,9 +35,9 @@ const Home: NextPage = () => {
       >
         <SimpleGrid cols={2} breakpoints={[{ maxWidth: 700, cols: 1 }]}>
           <Group position="center">
-            <div style={{ height: "500px" }}>
+            <div>
               <Title order={1}>Suggestion mode</Title>
-              <Text style={{ height: "110px" }}>
+              <Text>
                 This mode is for people who are maybe playing their first time
                 and dont want as much showen to them. It will not tell you
                 everything and leave more of it up to you by giving you hints on
@@ -53,9 +53,9 @@ const Home: NextPage = () => {
             </div>
           </Group>
           <Group position="center">
-            <div style={{ height: "500px" }}>
+            <div >
               <Title order={1}>Wiki mode</Title>
-              <Text style={{ height: "110px" }}>
+              <Text>
                 This mode is for people who want to know everything, it will
                 tell you things like what exatly to get and how to. It will also
                 have more links to wiki pages for items to let you see exatly
