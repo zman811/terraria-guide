@@ -1,12 +1,8 @@
 import {
   Button,
   Center,
-  Container,
-  Divider,
-  Grid,
   Group,
   Modal,
-  Paper,
   SimpleGrid,
   Space,
   Text,
@@ -14,7 +10,6 @@ import {
 } from "@mantine/core";
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import { useState } from "react";
 
 const Home: NextPage = () => {
@@ -53,7 +48,7 @@ const Home: NextPage = () => {
             </div>
           </Group>
           <Group position="center">
-            <div >
+            <div>
               <Title order={1}>Wiki mode</Title>
               <Text>
                 This mode is for people who want to know everything, it will
