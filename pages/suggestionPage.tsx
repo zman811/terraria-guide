@@ -1,6 +1,7 @@
-import { Center, Chip, Group, Space, Title } from "@mantine/core";
+import { Button, Center, Chip, Group, Space, Title } from "@mantine/core";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 
 const SuggestionPage: NextPage = () => {
@@ -16,6 +17,11 @@ const SuggestionPage: NextPage = () => {
       <main>
         <Group position="center">
           <Title order={1}>Suggestion Page</Title>
+          <div style={{ position: "absolute", right: "0px" }}>
+            <Link href={"/"}>
+              <Button>Go back</Button>
+            </Link>
+          </div>
         </Group>
         <Space h="lg" />
         <Center>
