@@ -62,10 +62,12 @@ const Home: NextPage = () => {
               </Text>
               <Space h="lg" />
               <Center>
-                <Button fullWidth size="xl">
+              <Link href={'/wikiPage'}>
+                <Button component="a" fullWidth size="xl">
                   Pick Wiki Mode
-                  {/* TODO This will take to wiki mode main page */}
+                  {/* TODO this will take to wiki mode main page */}
                 </Button>
+                </Link>
               </Center>
             </div>
           </Group>
