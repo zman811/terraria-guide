@@ -11,6 +11,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
+import SumSuggestion from "../components/sumSuggestion";
 
 const SuggestionPage: NextPage = () => {
   const [classValue, setClassValue] = useState("");
@@ -84,7 +85,7 @@ const SuggestionPage: NextPage = () => {
             {classValue === "Magic" && <div>Mage</div>}
             {classValue === "Melee" && <div>Melee</div>}
             {classValue === "Ranged" && <div>Ranged</div>}
-            {classValue === "Summoning" && <div>Summoning</div>}
+            {classValue === "Summoning" && <div><SumSuggestion gamestate={gamestate}/></div>}
           </div>
         )}
         {/*will render another component based on what was selected, ie: (<SuggestionMage gamestate={gamestate})} */}
